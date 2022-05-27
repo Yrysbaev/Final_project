@@ -1,21 +1,24 @@
 from tkinter import *
 
-def say_hi():
-    print("hello ~ !")
+#Create an instance of tkinter frame
+win= Tk()
 
-root = Tk()
+#Set the geometry of frame
+win.geometry("600x250")
 
-frame1 = Frame(root)
-frame2 = Frame(root)
-root.title("tkinter frame")
+#Create a frame
+frame = Frame(win)
+frame.pack(side="top", expand=True, fill="both")
 
-label= Label(frame1,text="Label",justify=LEFT)
-label.pack(side=LEFT)
+#Create a text label
+Label(frame,text="Enter the Password", font=('Helvetica',20)).pack(pady=20)
 
-hi_there = Button(frame2,text="say hi~",command=say_hi)
-hi_there.pack()
+def clear_frame():
+   for widgets in frame.winfo_children():
+      widgets.destroy()
 
-frame1.pack(padx=1,pady=1)
-frame2.pack(padx=10,pady=10)
+#Create a button to close the window
+Button(frame, text="Clear", font=('Helvetica bold', 10), command=
+clear_frame).pack(pady=20)
 
-root.mainloop()
+win.mainloop()

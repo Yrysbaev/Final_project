@@ -20,7 +20,8 @@ class FirstPage:
     
     def EXIT(self):
 
-        root.quit()
+        root.destroy()
+        
 
     def buttons(self):        
 
@@ -52,7 +53,7 @@ class SecondPage:
         
         C = tkinter.Button(root, text ="TEST", command = SecondPage().Spage )
         C.pack(side=BOTTOM)
-    
+
 root = Tk()
 root.geometry("400x600")
 root.resizable(False, False)
