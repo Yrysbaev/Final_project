@@ -38,7 +38,10 @@ class HomePage:
         Second = tkinter.Button(frame, text ="White & Black", command = SecondPage().all )
         Second.pack(side=BOTTOM)
 class SecondPage:
-    
+    def __init__(self):
+        pass 
+    def normalize_size(self):
+        pass 
     def all(self):
         clear_frame()
         filename1 = fd.askopenfilename()

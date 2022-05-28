@@ -7,7 +7,6 @@ import test1
 
 win= Tk()
 win.geometry("400x600")
-win.resizable(False,False)
 win.tk.call('wm', 'iconphoto', win._w, tkinter.PhotoImage(file='Icon.png'))
 
 frame = Frame(win)
@@ -69,7 +68,7 @@ class Spage:
         clear_frame()
         Label(frame,text="Enter the Password", font=('Helvetica',20)).pack(pady=20)
         Button(frame, text="Clear", font=('Helvetica bold', 10), command=
-        HomePage).pack(pady=20)
+        HomePage().Ala_l).pack(pady=20)
 
 def clear_frame():
     for widgets in frame.winfo_children():
