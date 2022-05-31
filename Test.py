@@ -76,6 +76,6 @@ def clear_frame():
 
 HomePage()
 test1.Yrysbaev_Maksatbek()
-#Create a button to close the window
+
 
 win.mainloop()
