@@ -2,6 +2,7 @@ from fileinput import filename
 from tkinter import *
 import tkinter
 from token import RIGHTSHIFT
+from turtle import bgcolor
 from PIL import Image, ImageTk
 from tkinter import filedialog as fd
 import test1
@@ -11,7 +12,7 @@ win.geometry("400x600")
 win.resizable(False,False)
 win.tk.call('wm', 'iconphoto', win._w, tkinter.PhotoImage(file='Icon.png'))
 
-frame = Frame(win)
+frame = Frame(win,bg='green')
 frame.pack(side="top", expand=True, fill="both")
 
 class HomePage:
@@ -29,6 +30,7 @@ class HomePage:
     def Text(self):
         self.l.config(font =("Courier", 14))  
         self.l.pack()
+
     def Buttons(self):
         self.Exit.pack(side=BOTTOM,pady=5)
         self.Spage.pack(side=BOTTOM,pady=5)
@@ -48,7 +50,7 @@ class SecondPage:
 
         self.Return = tkinter.Button(frame, text="Return to HomePage",command = HomePage)
         self.Save = tkinter.Button(frame, text="       Save       ",command = self.savefile)
-        self.Choose = tkinter.Button(frame, text=" Choose ",command=self.Choose_file)
+        self.Choose = tkinter.Button(frame, text=" Choose ", command = self.Choose_file)
         self.Buttons()
 
     def normalize_size(self):
@@ -65,10 +67,9 @@ class SecondPage:
         self.label1.place(x=0, y=0)        
     
     def Buttons(self):
-        self.Return.place(relx=0.5, rely=0.5, anchor='center')
-        self.Return.pack()
-        self.Save.pack()
-        self.Choose.pack()
+        self.Return.pack(side=BOTTOM)
+        self.Save.pack(side=BOTTOM)
+        self.Choose.pack(side=BOTTOM)
 
     def savefile(self):
         a = self.image1.filename = fd.asksaveasfilename(initialdir = "/",title = "Select file",filetypes = (('JPEG', ('*.jpg','*.jpeg','*.jpe','*.jfif')),('PNG', '*.png'),('BMP', ('*.bmp','*.jdib')),('GIF', '*.gif')))
