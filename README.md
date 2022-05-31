@@ -1,4 +1,4 @@
-# Final_project
+
 <h1 align="center">Hi 👋, I'm Maksatbek Yrysbaev</h1>
 
 - 🔭 I’m currently working on **final project**
